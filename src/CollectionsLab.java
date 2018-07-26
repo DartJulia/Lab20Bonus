@@ -25,7 +25,7 @@ public class CollectionsLab {
 		items.put("juice", 4.50);
 		ArrayList<String> itemsOrdered = new ArrayList<>();
 		ArrayList<Double> priceOfItems = new ArrayList<>();
-
+		ArrayList<Integer> quantity = new ArrayList<>();
 
 		System.out.println("Welcome to Julia's Market! \n");
 
@@ -56,7 +56,7 @@ public class CollectionsLab {
 				System.out.println("Sorry, we don't have those. Try something else. ");
 			}
 			itemsOrdered.add(userOrder);
-
+			quantity.add(1);
 			priceOfItems.add(items.get(userOrder));
 
 
@@ -69,10 +69,10 @@ public class CollectionsLab {
 
 
 		System.out.println("Your total order is: ");
-		System.out.printf("%-15s %-10s%n", "Item", "Price");
-		System.out.printf("%-10s%n", "======================");
+		System.out.printf("%-15s %-10s %-10s%n", "Item", "Price $", "Quantity");
+		System.out.printf("%-10s%n", "====================================");
 		for (int i = 0; i < itemsOrdered.size(); i++) {
-			System.out.printf("%-15s %-10s%n", itemsOrdered.get(i), priceOfItems.get(i));
+			System.out.printf("%-15s %-10s %-10s%n", itemsOrdered.get(i), priceOfItems.get(i), quantity.get(i));
 		}
 
 		System.out.println();
