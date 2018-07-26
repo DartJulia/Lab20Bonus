@@ -112,7 +112,7 @@ public class CollectionsLab {
 	public static String getLowIndex(ArrayList<Double> prices, ArrayList<String> items) {
 		double lowPrice = prices.get(0);
 		String lowItem = "";
-		for (int i = 0; i < prices.size(); i++) {
+		for (int i = 1; i < prices.size(); i++) {
 			if (prices.get(i) < lowPrice) {
 				lowPrice = prices.get(i);
 				lowItem = items.get(i);
